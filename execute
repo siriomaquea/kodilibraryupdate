@@ -5,8 +5,7 @@
 # Linkedin: https://www.linkedin.com/in/siriomaqueaalves/
 #################
 
-#change to your hd name
-HDNAME="NAME-OF-HARDDISK"
+source variables
 
 #case hd is not connected, don't update Kodi library
 if mount | grep -q $HDNAME ; then
@@ -16,7 +15,7 @@ if mount | grep -q $HDNAME ; then
  ping -c 3 google.com
  if [ $? -eq  0 ]; then
                 echo "ping success";
-				#Put your absoluty path in Python script if you had some problem
+				# Put your absoluty path script
                 kodi-send -a "RunScript(kodilibraryupdate.py)";
         else
                 echo "fail ping, do nothing"
