@@ -1,0 +1,28 @@
+#!/bin/bash
+#################
+# Author: SIRIO MAQUEA ALVES
+# GitHub: @siriomaquea
+# Linkedin: https://www.linkedin.com/in/siriomaqueaalves/
+#################
+
+#change to your hd name
+HDNAME="NAME-OF-HARDDISK"
+
+#case hd is not connected, don't update Kodi library
+if mount | grep -q $HDNAME ; then
+ echo "pass 1"
+ 
+ #case internet is not connected, don't update Kodi library
+ ping -c 3 google.com
+ if [ $? -eq  0 ]; then
+                echo "ping success";
+				# Put your absoluty path script
+                kodi-send -a "RunScript(kodilibraryupdate.py)";
+        else
+                echo "fail ping, do nothing"
+        fi
+else
+echo "hd is not mounted, do nothing"
+fi
+
+exit 0
