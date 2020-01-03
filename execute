@@ -16,7 +16,7 @@ if mount | grep -q $HDNAME ; then
  ping -c 3 google.com
  if [ $? -eq  0 ]; then
                 echo "ping success";
-				# Put your absoluty path script
+				#Put your absoluty path in Python script if you had some problem
                 kodi-send -a "RunScript(kodilibraryupdate.py)";
         else
                 echo "fail ping, do nothing"
