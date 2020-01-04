@@ -1,9 +1,8 @@
 #!/bin/bash
 #################
-# Author: SIRIO MAQUEA ALVES
-# GitHub: @siriomaquea
-# Linkedin: https://www.linkedin.com/in/siriomaqueaalves/
+## Author: SIRIO MAQUEA ALVES
+## GitHub: @siriomaquea
+## Linkedin: https://www.linkedin.com/in/siriomaqueaalves/
 #################
-
-#change to your hd name
-HDNAME="NAME OF HARD DISK"
+##change to your hd name
+HDNAME="HARD DISK NAME"

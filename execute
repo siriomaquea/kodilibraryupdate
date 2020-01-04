@@ -1,9 +1,13 @@
 #!/bin/bash
 #################
-# Author: SIRIO MAQUEA ALVES
-# GitHub: @siriomaquea
-# Linkedin: https://www.linkedin.com/in/siriomaqueaalves/
+## Author: SIRIO MAQUEA ALVES
+## GitHub: @siriomaquea
+## Linkedin: https://www.linkedin.com/in/siriomaqueaalves/
 #################
+
+##set the path to execute script and haven't a problem with variables not found or anything else
+SCRIPTPATH=
+cd $SCRIPTPATH
 
 source variables
 
@@ -16,7 +20,7 @@ if mount | grep -q $HDNAME ; then
  if [ $? -eq  0 ]; then
                 echo "ping success";
 				# Put your absoluty path script
-                kodi-send -a "RunScript(kodilibraryupdate.py)";
+                kodi-send -a "RunScript($SCRIPTPATH/kodilibraryupdate.py)";
         else
                 echo "fail ping, do nothing"
         fi
